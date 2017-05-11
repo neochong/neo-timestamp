@@ -34,7 +34,3 @@ app.get('/:time', function(req,res) {
   res.json({unix: unixDate, natural: naturalDate})
 
 })
-
-app.listen(3000, function() {
-  console.log("Working")
-});
