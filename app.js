@@ -1,5 +1,5 @@
 var express = require('express')
-var app = module.exports = express()
+var app = express.Router();
 app.use(express.static(__dirname + '/views'))
 
 app.get('/', function(req,res) {
@@ -34,3 +34,5 @@ app.get('/:time', function(req,res) {
   res.json({unix: unixDate, natural: naturalDate})
 
 })
+
+module.exports = app;
