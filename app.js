@@ -1,5 +1,5 @@
 var express = require('express')
-var app = module.exports = express.Router();
+var app = module.exports = express();
 app.use(express.static(__dirname + '/views'))
 
 app.get('/', function(req,res) {
@@ -36,3 +36,7 @@ app.get('/:time', function(req,res) {
 })
 
 module.exports = app;
+
+app.listen($PORT, function() {
+  console.log("running")
+})
