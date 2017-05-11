@@ -1,5 +1,5 @@
 var express = require('express')
-var app = express.Router();
+var app = module.exports = express.Router();
 app.use(express.static(__dirname + '/views'))
 
 app.get('/', function(req,res) {
